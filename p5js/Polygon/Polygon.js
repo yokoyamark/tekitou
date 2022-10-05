@@ -3,7 +3,7 @@ function setup () {
   frameRate(20)
   background(30)
   smooth()
-  p = new Pentagon()
+  p = new Polygon()
 }
 
 function draw () {
@@ -11,13 +11,13 @@ function draw () {
 }
 
 
-class Pentagon {
+class Polygon {
 
   constructor() {
     this.rotateValue = 4
     this.rotate = []
     this.radius = 300
-    this.pointValue = 5
+    this.pointValue = 6
     this.angle = []
     this.crdnt = []
     this.dp = []
@@ -41,11 +41,11 @@ class Pentagon {
     // this.printPoint()
 
     if (i % 2) {
-      stroke(255, 2)
-      strokeWeight(18)
+      // stroke(255, 2)
+      // strokeWeight(18)
     } else {
       stroke(255, 30)
-      strokeWeight(6)
+      strokeWeight(12)
     }
     this.printLine()
 
@@ -56,7 +56,7 @@ class Pentagon {
 
   printPoint () {
     stroke(255)
-    strokeWeight(5)
+    strokeWeight(30)
 
     for (var k = 0; k < this.crdnt.length; k++) {
       point(this.crdnt[k][0], this.crdnt[k][1])
@@ -79,5 +79,5 @@ function windowResized () {
 
 function mouseClicked(){
   noLoop()
-  saveFrames("Pentagon", 'png', 1, 1);
+  saveFrames("Polygon", 'png', 1, 1);
 }

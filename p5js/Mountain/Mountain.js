@@ -29,7 +29,7 @@ class Mountain {
       console.log("FrameRate: " + f)
     }
     translate(width / 2, height / 2)
-    rotate(HALF_PI)
+    rotate(HALF_PI * 3)
     let len = 200
     stroke(255)
     strokeWeight(10)
@@ -41,7 +41,9 @@ class Mountain {
       console.log(this.radians)
     }
 
-
+    // if (this.radians < PI) {
+      point(len * tan(this.radians), len * sin(this.radians))
+    // }
 
   }
 }
